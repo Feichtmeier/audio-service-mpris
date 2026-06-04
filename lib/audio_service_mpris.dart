@@ -191,7 +191,7 @@ class AudioServiceMpris extends AudioServicePlatform {
     _listenToMethodEvents();
 
     await _dBusClient.registerObject(_mpris);
-    _serviceName = 'org.mpris.MediaPlayer2.${_defaults.dBusName}.instance';
+    _serviceName = 'org.mpris.MediaPlayer2.${_defaults.dBusName}';
     await _registerIfNeeded();
     _mpris.identity = _defaults.identity;
   }
